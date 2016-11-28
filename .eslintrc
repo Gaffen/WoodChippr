@@ -1,0 +1,27 @@
+{
+  "rules":{
+    "new-cap": [
+      1,
+      {
+        "newIsCap": false,
+        "capIsNew": false
+      }
+    ],
+    "no-multi-spaces": [
+      0
+    ],
+    "camelcase": [2, {"properties": "never"}]
+  },
+  "globals": {
+    "jQuery": false,
+    "require": false,
+    "console": false,
+    "$": false,
+    "module": false,
+    "baseUrl": false,
+    "token": false,
+    "window": false,
+    "document": false,
+    "process": false
+  }
+}

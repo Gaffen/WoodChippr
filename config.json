@@ -1,0 +1,6 @@
+{
+  "projectDir": "wp-content/themes/woodchippr/",
+  "bundles":{
+    "main":"./dev/js/main.js"
+  }
+}

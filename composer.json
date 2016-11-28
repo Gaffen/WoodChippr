@@ -1,0 +1,33 @@
+{
+  "name": "gaffen/woodchippr",
+  "description": "WoodChippr WordPress development workflow",
+  "authors": [
+    {
+      "name": "Gaffen",
+      "email": "matt@gaffen.co.uk"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "wikimedia/composer-merge-plugin": "^1.3",
+    "composer/installers" : "~1.0",
+    "johnpbloch/wordpress": "*",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "extra": {
+    "wordpress-install-dir": "web/cockpit",
+    "installer-paths" : {
+      "web/wp-content/mu-plugins": ["type:wordpress-plugin"]
+    },
+    "merge-plugin": {
+      "include": [
+        "composer-merge/*.json"
+      ]
+    }
+  }
+}

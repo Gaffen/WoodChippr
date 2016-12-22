@@ -49,6 +49,7 @@ temp/
 /web/wp-content/upgrade/
 /web/cockpit
 /.sass-cache
+/composer-merge/*
 /web/wp-content/plugins/*
 /web/wp-content/mu-plugins/*
 !/web/wp-content/mu-plugins/index.php

@@ -17,12 +17,15 @@
     "wikimedia/composer-merge-plugin": "^1.3",
     "composer/installers" : "~1.0",
     "johnpbloch/wordpress": "*",
-    "vlucas/phpdotenv": "^2.4"
+    "vlucas/phpdotenv": "^2.4",
+    "wpackagist-plugin/force-regenerate-thumbnails": "*",
+    "wpackagist-plugin/timber-library": "*",
+    "wpackagist-plugin/wordpress-seo": "*"
   },
   "extra": {
     "wordpress-install-dir": "web/cockpit",
     "installer-paths" : {
-      "web/wp-content/mu-plugins": ["type:wordpress-plugin"]
+      "web/wp-content/mu-plugins/{$name}": ["type:wordpress-plugin"]
     },
     "merge-plugin": {
       "include": [

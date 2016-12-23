@@ -30,7 +30,7 @@
   },
   "scripts": {
     "setup": "node ./tasks/init.js",
-    "start": "gulp watch",
+    "start": "gulp startwatch",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

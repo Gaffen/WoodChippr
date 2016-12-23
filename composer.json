@@ -23,7 +23,7 @@
     "wpackagist-plugin/wordpress-seo": "*"
   },
   "extra": {
-    "wordpress-install-dir": "web/cockpit",
+    "wordpress-install-dir": "web/controlcentre",
     "installer-paths" : {
       "web/wp-content/mu-plugins/{$name}": ["type:wordpress-plugin"]
     },

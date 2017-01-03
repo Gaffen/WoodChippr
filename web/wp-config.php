@@ -17,6 +17,7 @@ define( 'DB_HOST', $_ENV['DB_HOST'] ); // Probably 'localhost'
 // Custom Content Directory
 // ========================
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . $_ENV['WP_CONTENT_DIR'] );
+define( 'WP_CONTENT_URL', $_ENV['WP_CONTENT_URL'] );
 
 // ================================================
 // You almost certainly do not want to change these

@@ -28,6 +28,6 @@ gulp.task("svgstore", function () {
         parserOptions: { xmlMode: true }
       }))
       .pipe(rename("inline-svgsprite.twig"))
-      .pipe(gulp.dest(config.projectDir + "views/partials/"))
+      .pipe(gulp.dest(config.projectDir + process.env.WP_CONTENT_DIR + '/themes/' + process.env.THEME_NAME + '/' + "views/partials/"))
       .pipe(notify("SVGs Exported"));
 });

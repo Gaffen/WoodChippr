@@ -30,6 +30,6 @@ gulp.task("scripts", function() {
 
   return gulp.src(entryPoints, {base:base})
     .pipe(webpackStream(options, webpack))
-    .pipe(gulp.dest(config.projectDir+"/js"))
+    .pipe(gulp.dest(config.projectDir + process.env.WP_CONTENT_DIR + '/themes/' + process.env.THEME_NAME + '/' + "/js"))
     .pipe(livereload());
 });

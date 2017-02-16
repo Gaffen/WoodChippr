@@ -1,5 +1,5 @@
 {
-  "projectDir": "web/wp-content/themes/woodchippr/",
+  "projectDir": "web",
   "bundles":[
     "main.js"
   ],

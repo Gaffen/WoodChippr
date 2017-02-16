@@ -35,7 +35,7 @@ gulp.task("sass", function() {
       .pipe(prefix(JSON.parse(process.env.AUTOPREFIX_ARGS)))
       .pipe(gulpif(process.env.NODE_ENV !== "production", sourcemaps.write()))
       .pipe(gulpif(process.env.NODE_ENV === "production", csso()))
-      .pipe(gulp.dest(config.projectDir + "css/"))
+      .pipe(gulp.dest(config.projectDir + process.env.WP_CONTENT_DIR + '/themes/' + process.env.THEME_NAME + '/' + "css/"))
       .pipe(livereload())
       .pipe(notify("updated"));
 });

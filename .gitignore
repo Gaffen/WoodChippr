@@ -54,6 +54,7 @@ temp/
 /web/wp-content/plugins/*
 /web/wp-content/mu-plugins/*
 !/web/wp-content/mu-plugins/index.php
+!/web/wp-content/mu-plugins/seipel-fields
 /web//wp-content/uploads/
 /web/wp-content/themes/twenty*/
 /web/wp-content/themes/timber*/

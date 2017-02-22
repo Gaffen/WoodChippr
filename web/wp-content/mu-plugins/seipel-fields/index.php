@@ -1,6 +1,17 @@
 <?php
 // require_once 'inc/acf.php';
 
+require_once 'post-types/glossary.php';
+require_once 'post-types/faq.php';
+require_once 'post-types/enquiries/index.php';
+
+function seipel_clean_wordpress_menu() {
+    remove_menu_page( 'edit.php' );
+}
+add_action( 'admin_menu', 'seipel_clean_wordpress_menu' );
+
+add_theme_support( 'post-thumbnails' );
+
 add_filter('acf/settings/save_json', 'my_acf_json_save_point');
 
 function my_acf_json_save_point( $path ) {

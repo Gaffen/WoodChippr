@@ -26,7 +26,7 @@ gulp.task("watch", function() {
     process.env.DEV_FILES_DIR+'/'+process.env.SVG_DIR+"/**/**/*.svg",
     ["svgstore"]
   );
-  gulp.watch("wp-content/**/**/**/*.twig").on("change", function(file){
+  gulp.watch("web/wp-content/**/**/**/*.twig").on("change", function(file){
     livereload.reload(file);
     notify("Templates Refreshed");
   });

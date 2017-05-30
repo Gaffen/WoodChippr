@@ -4,6 +4,7 @@ var requireDir    = require('require-dir'),
     gulp          = require("gulp"),
 
 // Include Our Plugins
+    notify        = require("gulp-notify"),
     livereload    = require("gulp-livereload");
 
 requireDir('./gulp', { recurse: true });

@@ -50,6 +50,7 @@ define( 'SAVEQUERIES', $debug );
 define( 'WP_DEBUG', $debug );
 ini_set( 'display_errors', $display_errors );
 define( 'WP_DEBUG_DISPLAY', $debug );
+define( 'WP_DEBUG_LOG', $debug );
 
 // ======================================
 // Load a Memcached config if we have one

@@ -59,9 +59,6 @@ temp/
 /web/wp-content/uploads/
 /web/wp-content/themes/twenty*/
 /web/wp-content/themes/timber*/
-/web/wp-content/themes/woodchippr/css/
-/web/wp-content/themes/woodchippr/js/
-/web/wp-content/themes/woodchippr/views/partials/inline-svgsprite.twig
 composer.lock
 /bower_components
 /web/wp-content/w3tc-config/*

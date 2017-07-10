@@ -12,6 +12,7 @@
     ],
     "camelcase": [2, {"properties": "never"}]
   },
+  "parser": "babel-eslint",
   "globals": {
     "jQuery": false,
     "require": false,

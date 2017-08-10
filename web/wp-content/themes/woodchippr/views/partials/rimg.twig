@@ -1,0 +1,65 @@
+{% if not imgsize %}
+  {% set imgsize = 'full' %}
+{% endif %}
+{% if imgsize is iterable %}
+  {% set imglandsize = imgsize.land %}
+  {% set imgportsize = imgsize.port %}
+  {% if land.id %}
+    {% set mainsize = {land: fn('get_base_size', imglandsize, land), port: imgportsize} %}
+  {% endif %}
+  {% if port.id %}
+    {% set mainsize = {port: fn('get_base_size', imgportsize, port), land: imglandsize} %}
+  {% endif %}
+{% else %}
+  {% if land.id %}
+    {% set mainsize = fn('get_base_size', imgsize, land) %}
+  {% endif %}
+  {% if port.id %}
+    {% set mainsize = fn('get_base_size', imgsize, port) %}
+  {% endif %}
+{% endif %}
+{% if land.id %}
+  {% if land.src %}
+    {% set landsrc = land.src %}
+  {% else %}
+    {% set landsrc = land.url %}
+  {% endif %}
+{% endif %}
+{% if port.id %}
+  {% if port.src %}
+    {% set portsrc = port.src %}
+  {% else %}
+    {% set portsrc = port.url %}
+  {% endif %}
+{% endif %}
+
+{% if not sizes %}
+  {% set sizes = '100vw' %}
+{% endif %}
+
+{% if port and land %}
+  <picture {{ class ? 'class="'~class~'"'}} alt="{{alt}}">
+    {% if imgsize is iterable %}
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source media="(orientation: landscape)" sizes="{{sizes}}" srcset="{{fn('wp_get_attachment_image_srcset', land.id, mainsize.land)}}">
+      <source media="(orientation: portrait)" sizes="{{sizes}}" srcset="{{fn('wp_get_attachment_image_srcset', port.id, mainsize.port)}}">
+      <!--[if IE 9]></video><![endif]-->
+      <img src="{{(imgsize.land != 'full')? land.sizes[imgsize.land ~ '320'] : landsrc}}" srcset="{{fn('wp_get_attachment_image_srcset', land.id, mainsize.land)}}" sizes="{{sizes}}" alt="">
+    {% else %}
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source media="(orientation: landscape)" sizes="{{sizes}}" srcset="{{fn('wp_get_attachment_image_srcset', land.id, mainsize)}}">
+      <source media="(orientation: portrait)" sizes="{{sizes}}" srcset="{{fn('wp_get_attachment_image_srcset', port.id, mainsize)}}">
+      <!--[if IE 9]></video><![endif]-->
+      <img src="{{(imgsize != 'full')? land.sizes[imgsize ~ '320'] : landsrc}}" srcset="{{fn('wp_get_attachment_image_srcset', land.id, mainsize)}}" sizes="{{sizes}}" alt="">
+    {% endif %}
+  </picture>
+{% elseif land or port %}
+  {% if land %}
+    <img src="{{(imgsize != 'full')? land.sizes[imgsize ~ '320'] : landsrc}}" {{ class ? 'class="'~class~'"'}} sizes="{{sizes}}" srcset="{{fn('wp_get_attachment_image_srcset', land.id, mainsize)}}" alt="{{alt}}">
+  {% else %}
+    <img src="{{(imgsize != 'full')? port.sizes[imgsize ~ '320'] : portsrc}}" {{ class ? 'class="'~class~'"'}} sizes="{{sizes}}" srcset="{{fn('wp_get_attachment_image_srcset', port.id, mainsize)}}" alt="{{alt}}">
+  {% endif %}
+{% else %}
+  Please provide either portrait or landscape image
+{% endif %}
+{#{dump([[land.width, (land.width * 0.66825775656325)|round], land.sizes[imgsize ~ '320'], imgmeta, land.id])}#}

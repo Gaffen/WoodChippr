@@ -21,16 +21,17 @@ Anyone who has experience creating Wordpress themes, and tends to use Wordpress 
 ## Installation:
 
 - Place files on server
-- 'composer install'
-- Fill out and rename local-config-sample.php to local-config.php and wp-config sample. local-config is only needed for local development.
-- Fill in database access details
-- WP_CONTENT_URL can also be overwritten in this file.
+- `npm install`
+- `composer install`
+- `npm run build` to minify assets
+- Fill out and rename sample.env to .env and wp-config sample.
 
 ## Dev Env
 
 - Install Node
-- npm install
-- run gulp
+- `npm install`
+- `npm run setup` (if you want to install ACF)
+- `npm start`
 - 'composer install' to add new php modules
 
 ## Requiring plugins
@@ -38,4 +39,4 @@ Anyone who has experience creating Wordpress themes, and tends to use Wordpress 
 Depending on the plugin here are two recommended approaches to requiring plugins for your theme:
 
 1. Include the plugins in the `composer.json` file, this will install the mu-plugins folder.
-2. Run `composer create-project tgmpa/tgm-plugin-activation --no-dev` in your theme directory, it is recommended to do this in the `functions` directory. this will set up a [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) instance in your theme, check `example.php` for instructions for stipulated recommended or required plugins for your theme. You should use this method if the plugin does more than provide utility functions for your theme and required the plugin activation hook to fire.
+2. Run `composer create-project tgmpa/tgm-plugin-activation --no-dev` in your theme directory, it is recommended to do this in the `functions` directory. this will set up a [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) instance in your theme, check `example.php` for instructions for stipulated recommended or required plugins for your theme. You should use this method if the plugin does more than provide utility functions for your theme and requires the plugin activation hook to fire.

@@ -1,4 +1,4 @@
-#**WoodChippr**
+# **WoodChippr**
 
 **A highly opinionated workflow and development framework for wordpress**
 
@@ -12,13 +12,13 @@ This theme comes with a large array of opinionated defaults. This includes the f
 
 By default **WoodChippr** includes some tracking code in the header. If you don't change this it will remind you with a big ass h1 before your site code starts. To change this either edit `views/partials/tracking.twig`, or change `$context['analyticscode']` in `functions.php`
 
-##**Who should use this project?**
+## **Who should use this project?**
 
 Anyone who has experience creating Wordpress themes, and tends to use Wordpress more as a web framework than a blogging engine. This project aims to extend the famous 5 minute install process for theme developers, by giving them a complete development environment complete with package management and frontend development tooling out of the box.
 
 **PLEASE NOTE:** As this framework is designed for theme developers, the actual theme itself is the bare essentials needed to make a theme appear in the Wordpress appearance section, with a few extras thrown in to provide helper functionality.
 
-##Installation:
+## Installation:
 
 - Place files on server
 - 'composer install'
@@ -26,14 +26,14 @@ Anyone who has experience creating Wordpress themes, and tends to use Wordpress 
 - Fill in database access details
 - WP_CONTENT_URL can also be overwritten in this file.
 
-##Dev Env
+## Dev Env
 
 - Install Node
 - npm install
 - run gulp
 - 'composer install' to add new php modules
 
-##Requiring plugins
+## Requiring plugins
 
 Depending on the plugin here are two recommended approaches to requiring plugins for your theme:
 

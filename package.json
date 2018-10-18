@@ -19,7 +19,7 @@
     "gulp-csso": "^1.1.0",
     "gulp-eslint": "^3.0.1",
     "gulp-if": "^2.0.2",
-    "gulp-livereload": "^3.8.1",
+    "gulp-livereload": "^4.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
@@ -28,6 +28,7 @@
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^5.0.5",
     "gulp-uglify": "^1.5.1",
+    "json-loader": "^0.5.7",
     "merge-stream": "^1.0.1",
     "modernizr": "^3.6.0",
     "modernizr-loader": "^1.0.1",
@@ -35,7 +36,6 @@
     "require-dir": "^0.3.1",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.0.0",
-    "webpack-modernizr-loader": "^4.0.1",
     "webpack-stream": "^3.1.0"
   },
   "scripts": {

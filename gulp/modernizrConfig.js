@@ -1,11 +1,11 @@
-var path = require('path');
+var path = require("path");
 
 module.exports = {
   module: {
     rules: [
       {
-        test: /\.modernizrrc$/,
-        loader: "modernizr-loader!json-loader"
+        test: /\.modernizrrc(\.json)?$/,
+        use: ["modernizr-loader", "json-loader"]
       }
     ]
   },
@@ -14,4 +14,4 @@ module.exports = {
       modernizr$: path.resolve(__dirname, "../.modernizrrc")
     }
   }
-}
+};

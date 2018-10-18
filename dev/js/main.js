@@ -1,7 +1,7 @@
 (function($) {
-	'use strict';
+  "use strict";
 
-	var testModule = require('./modules/test');
+  var testModule = require("./modules/test");
 
-	testModule($);
+  testModule($);
 })(jQuery);

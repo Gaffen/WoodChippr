@@ -5,17 +5,17 @@
   {% set imglandsize = imgsize.land %}
   {% set imgportsize = imgsize.port %}
   {% if land.id %}
-    {% set mainsize = {land: fn('get_base_size', imglandsize, land), port: imgportsize} %}
+    {% set mainsize = {land: woodchippr_get_base_img( imglandsize, land.id), port: imgportsize} %}
   {% endif %}
   {% if port.id %}
-    {% set mainsize = {port: fn('get_base_size', imgportsize, port), land: imglandsize} %}
+    {% set mainsize = {port: woodchippr_get_base_img( imgportsize, port.id), land: imglandsize} %}
   {% endif %}
 {% else %}
   {% if land.id %}
-    {% set mainsize = fn('get_base_size', imgsize, land) %}
+    {% set mainsize = woodchippr_get_base_img( imgsize, land.id) %}
   {% endif %}
   {% if port.id %}
-    {% set mainsize = fn('get_base_size', imgsize, port) %}
+    {% set mainsize = woodchippr_get_base_img( imgsize, port.id) %}
   {% endif %}
 {% endif %}
 {% if land.id %}

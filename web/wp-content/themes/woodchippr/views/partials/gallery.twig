@@ -1,0 +1,7 @@
+<ul>
+  {% for image in images %}
+    <li>
+      {% include 'partials/rimg.twig' with {land: image} only %}
+    </li>
+  {% endfor %}
+</ul>

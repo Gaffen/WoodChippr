@@ -5,6 +5,7 @@
   "main": "./tasks/init.js",
   "repository": "https://Gaffen@bitbucket.org/spritzcreative/coqochi.git",
   "devDependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
@@ -19,11 +20,11 @@
     "gulp-csso": "^1.1.0",
     "gulp-eslint": "^3.0.1",
     "gulp-if": "^2.0.2",
-    "gulp-livereload": "^4.0.0",
-    "gulp-notify": "^2.2.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^5.0.5",
@@ -36,13 +37,14 @@
     "require-dir": "^0.3.1",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.0.0",
-    "webpack-stream": "^3.1.0"
+    "webpack-stream": "^5.2.1"
   },
   "scripts": {
     "setup": "node ./tasks/init.js",
     "start": "gulp startwatch",
-    "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "NODE_ENV=production gulp",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node ./tasks/generate.js"
   },
   "author": "Matthew Gaffen",
   "license": "ISC",

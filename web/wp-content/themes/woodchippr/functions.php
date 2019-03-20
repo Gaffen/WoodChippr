@@ -64,11 +64,7 @@ class WoodChippr extends TimberSite
     public function add_to_context($context)
     {
         // $context['option'] = get_fields('option');
-        // $context['menu'] = new TimberMenu('Main Menu');
-        // Until the active class functionality is working for Timber,
-        // this is the best way of handling wordpress menus
-
-        $context['menu'] = wp_nav_menu(array( 'theme_location' => 'main-menu', 'echo' => false ));
+        $context['menu'] = new TimberMenu('Main Menu');
 
         $context["analyticscode"] = "MISSING_TRACKING_CODE";
 

@@ -9,7 +9,13 @@
 	<body class="{{body_class}}" data-template="base.twig">
 		<header class="header" >
 			{% block header %}
-				{{ menu }}
+				<ul>
+					{% for item in menu.items %}
+					  <li class="{{item.classes | join(" ") }}">
+							<a href="{{item.link}}">{{item.title}}</a>
+						</li>
+					{% endfor %}
+				</ul>
 			{% endblock %}
 		</header>
 

@@ -54,11 +54,13 @@ temp/
 /.sass-cache
 /composer-merge/*
 /web/wp-content/plugins/*
+!/web/wp-content/plugins/.gitkeep
 /web/wp-content/mu-plugins/*
 !/web/wp-content/mu-plugins/index.php
 !/web/wp-content/mu-plugins/site-functionality
 !/web/wp-content/mu-plugins/site-functionality/*
-/web/wp-content/uploads/
+/web/wp-content/upload/*
+!/web/wp-content/upload/.gitkeep
 /web/wp-content/themes/twenty*/
 /web/wp-content/themes/timber*/
 /web/wp-content/languages/*

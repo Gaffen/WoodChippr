@@ -62,6 +62,8 @@ temp/
 /web/wp-content/themes/twenty*/
 /web/wp-content/themes/timber*/
 /web/wp-content/languages/*
+/web/wp-content/plugins/*
+!/web/wp-content/plugins/.gitkeep
 composer.lock
 /bower_components
 /web/wp-content/w3tc-config/*

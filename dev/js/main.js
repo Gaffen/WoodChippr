@@ -1,3 +1,4 @@
+import Modernizr from "modernizr";
 (function($) {
   "use strict";
 

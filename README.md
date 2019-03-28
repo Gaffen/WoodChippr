@@ -40,3 +40,17 @@ Depending on the plugin here are two recommended approaches to requiring plugins
 
 1. Include the plugins in the `composer.json` file, this will install the mu-plugins folder.
 2. Run `composer create-project tgmpa/tgm-plugin-activation --no-dev` in your theme directory, it is recommended to do this in the `functions` directory. this will set up a [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) instance in your theme, check `example.php` for instructions for stipulated recommended or required plugins for your theme. You should use this method if the plugin does more than provide utility functions for your theme and requires the plugin activation hook to fire.
+
+## Compiler Features
+
+At the moment, you can optionally activate both es6 features like import statements and arrow functions but setting `usebabel` to `true` in `config.json`, and you can also integrate modernizr by setting `usemodernizr` to `true` in the same file. Modernizr can be configured using `.modernizrrc.json`
+
+At the moment extended babel configuration has to be modified in `/gulp/babelConfig.json`, though I am looking to improve this configuration setup to be more centralised in the near future.
+
+## Project Structure and Bundles
+
+At the moment project structure is recorded in `config.json`. Out of the box it shouldn't need modification. Unlike the `.env` file, the `config.json` file contains variables that should be expected to be constant between build environments.
+
+## Feedback
+
+This is all a personal project at the moment that I use to help smooth my personal frontend development workflow. If you find any issues or have a feature request please do create an issue and I will do my best to attend to your request. It would be nice to see other people finding this useful, and it's also to my benefit to make this setup as flexible and useful as possible.

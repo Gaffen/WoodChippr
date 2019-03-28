@@ -1,9 +1,15 @@
 {
   "projectDir": "web",
-  "bundles":[
-    "main.js"
-  ],
-  "sassfiles": [
-    "style.scss"
-  ]
+  "bundles": ["main.js"],
+  "sassfiles": ["style.scss"],
+  "themeName": "woodchippr",
+  "tooling": {
+    "devDir": "dev",
+    "useBabel": true,
+    "useModernizr": true,
+    "jsDir": "js",
+    "scssDir": "scss",
+    "autoprefixerArgs": ["last 2 version", "> 1%", "ie 9", "ie 8"],
+    "svgDir": "svg"
+  }
 }

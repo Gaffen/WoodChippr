@@ -12,7 +12,7 @@ var gulp = require("gulp"),
 gulp.task("scripts", function() {
   "use strict";
 
-  var base = "./" + process.env.DEV_FILES_DIR + "/" + process.env.JS_DIR + "/";
+  var base = "./" + config.tooling.devDir + "/" + config.tooling.jsDir + "/";
 
   var entryPoints = config.bundles.reduce(function(accum, src) {
     accum.push(base + src);
@@ -26,27 +26,11 @@ gulp.task("scripts", function() {
     }
   };
 
-  if (process.env.USE_BABEL) {
+  if (config.tooling.useBabel) {
     options.module = babelOptions.module;
   }
 
-  if (process.env.USE_MODERNIZR) {
-    var moduleSettingsRules = [];
-
-    if (
-      options.hasOwnProperty("module") &&
-      options.module.hasOwnProperty("rules")
-    ) {
-      moduleSettingsRules = moduleSettingsRules.concat(
-        options.module.rules,
-        modernizrConfig.module.rules
-      );
-    } else {
-      moduleSettingsRules = modernizrConfig.module.rules;
-    }
-
-    options.module.rules = moduleSettingsRules;
-
+  if (config.tooling.useModernizr) {
     options.resolve = modernizrConfig.resolve;
   }
 
@@ -70,7 +54,7 @@ gulp.task("scripts", function() {
         config.projectDir +
           process.env.WP_CONTENT_DIR +
           "/themes/" +
-          process.env.THEME_NAME +
+          config.themeName +
           "/" +
           "/js"
       )

@@ -69,3 +69,4 @@ temp/
 composer.lock
 /bower_components
 /web/wp-content/w3tc-config/*
+/dev/js/modernizr.js

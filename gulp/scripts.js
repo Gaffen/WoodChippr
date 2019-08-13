@@ -36,10 +36,9 @@ gulp.task("scripts", function() {
 
   if (process.env.NODE_ENV === "development") {
     options.devtool = "source-map";
+    options.mode = "development";
   } else {
-    Object.assign(options, {
-      plugins: [new webpack.optimize.UglifyJsPlugin()]
-    });
+    options.mode = "production";
   }
 
   return gulp

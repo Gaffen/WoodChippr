@@ -4,7 +4,6 @@ var gulp = require("gulp"),
   livereload = require("gulp-livereload"),
   notify = require("gulp-notify"),
   config = require("../config.json"),
-  UglifyJSPlugin = require("uglifyjs-webpack-plugin"),
   babelOptions = require("./babelConfig.js"),
   modernizrConfig = require("./modernizrConfig.js");
 

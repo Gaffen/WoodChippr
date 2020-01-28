@@ -27,10 +27,9 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "prompt": "^1.0.0",
     "require-dir": "^1.2.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.1",
     "webpack-stream": "^5.2.1"
   },

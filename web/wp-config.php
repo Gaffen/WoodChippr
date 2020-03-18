@@ -37,7 +37,7 @@ $table_prefix  = $_ENV['TABLE_PREFIX'];
 // ================================
 define('WPLANG', '');
 
-define('UPLOADS', $_ENV['WP_CONTENT_REL_WP'].$_ENV['UPLOADS']);
+//define('UPLOADS', $_ENV['WP_CONTENT_REL_WP'].$_ENV['UPLOADS']);
 
 // =================================================================
 // Debug mode

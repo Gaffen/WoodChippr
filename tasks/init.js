@@ -85,7 +85,7 @@ prompt.get(
 			},
 			acfVersion: {
 				description: colors.yellow('What version would you like to install?'),
-				default: '5.6.10',
+				default: '5.8.12',
 				type: 'string',
 				ask: function() {
 					return prompt.history('acfKey') !== null &&

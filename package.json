@@ -43,6 +43,5 @@
   },
   "author": "Matthew Gaffen",
   "license": "ISC",
-  "browser": {},
-  "dependencies": {}
+  "browser": {}
 }

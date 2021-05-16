@@ -14,10 +14,10 @@
     }
   ],
   "require": {
-    "wikimedia/composer-merge-plugin": "^1.3",
-    "composer/installers" : "~1.0",
+    "wikimedia/composer-merge-plugin": "*",
+    "composer/installers" : "*",
     "johnpbloch/wordpress": "*",
-    "vlucas/phpdotenv": "^2.4",
+    "vlucas/phpdotenv": "*",
     "wpackagist-plugin/force-regenerate-thumbnails": "*",
     "wpackagist-plugin/timber-library": "*",
     "wpackagist-plugin/wordpress-seo": "*"
